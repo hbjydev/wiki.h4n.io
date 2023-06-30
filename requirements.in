@@ -1,3 +1,5 @@
 mkdocs
-pymdown-extensions
-mkdocs-terminal
+mkdocs-material
+pillow
+cairosvg
+mkdocs-git-revision-date-localized-plugin

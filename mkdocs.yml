@@ -1,32 +1,78 @@
 ---
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+#
 site_name: wiki.h4n.io
 
+repo_url: https://github.com/hbjydev/wiki.h4n.io
+repo_name: wiki.h4n.io
+edit_uri: edit/main/docs/
+
 theme:
-  name: terminal
-  palette: dark
+  name: material
+  palette:
+    scheme: slate
+    primary: deep purple
+    accent: deep purple
   features:
-    - revision.date
-    - revision.history
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - announce.dismiss
+    - content.action.edit
+  icon:
+    tag:
+      monitoring: material/alert-circle
+    repo: fontawesome/brands/github
+  custom_dir: overrides
+
+copyright: Copyright &copy; 2023 Hayden Young.
+
+extra:
+  social:
+    - icon: fontawesome/brands/mastodon
+      link: https://hachyderm.io/@hayden
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/hayden_dev
+    - icon: fontawesome/brands/github
+      link: https://github.com/hbjydev
+  tags:
+    Monitoring: monitoring
+
+plugins:
+  - search
+  - social
+  - tags
+  - git-revision-date-localized:
+      enable_creation_date: true
 
 nav:
   - Home: 'index.md'
-  - Repo: 'https://github.com/hbjydev/wiki.h4n.io'
 
 markdown_extensions:
   # Python Markdown
-  - attr_list
+  - abbr
+  - admonition
   - def_list
   - footnotes
-  - md_in_html
-  - meta
   - toc:
-      permalink: "#"
-      permalink_title: Anchor link to this section for reference
-
-  # PyMdown Extensions
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.snippets:
-      base_path:
-        - docs
+      permalink: true
+  - tables
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
