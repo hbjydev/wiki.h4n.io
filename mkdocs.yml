@@ -1,0 +1,13 @@
+---
+site_name: wiki.h4n.io
+
+theme:
+  name: terminal
+  palette: dark
+  features:
+    - revision.date
+    - revision.history
+
+nav:
+  - Home: 'index.md'
+  - Repo: 'https://github.com/hbjydev/wiki.h4n.io'
