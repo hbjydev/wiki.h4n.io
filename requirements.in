@@ -3,3 +3,4 @@ mkdocs-material
 pillow
 cairosvg
 mkdocs-git-revision-date-localized-plugin
+mkdocs-awesome-pages-plugin

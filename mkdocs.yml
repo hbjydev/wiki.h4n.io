@@ -47,12 +47,10 @@ extra:
 
 plugins:
   - search
-  - tags
   - git-revision-date-localized:
       enable_creation_date: true
-
-nav:
-  - Home: 'index.md'
+  - awesome-pages
+  - tags
 
 markdown_extensions:
   # Python Markdown
