@@ -17,15 +17,15 @@
       systems = [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];
 
       perSystem = { config, self', inputs', pkgs, system, ... }:
-      {
-        devenv.shells.default = {
-          name = "wiki";
-          packages = with pkgs; [ just ];
-          languages.python = {
-            enable = true;
-            venv.enable = true;
+        {
+          devenv.shells.default = {
+            name = "wiki";
+            packages = with pkgs; [ just ];
+            languages.python = {
+              enable = true;
+              venv.enable = true;
+            };
           };
         };
-      };
     };
 }
